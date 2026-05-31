@@ -16,7 +16,7 @@ const AboutUs = () => {
             start: "51% center",
             end: "+=800 center",
             scrub: 0.5,
-            pin: true,
+            pin: !isMobile,
             pinSpacing: true,
             onLeaveBack: () => {
               if (!isMobile) gsap.to(".mask-clip-path2", { clipPath: "polygon(14% 0, 82% 16%, 80% 92%, 6% 89%)" });
@@ -59,7 +59,7 @@ const AboutUs = () => {
         <MouseParallaxChild factorX={0.3} factorY={0.5}>
           <div id="clip" className="relative h-dvh">
             <div
-              className="mask-clip-path2 absolute left-1/2 top-0 z-20 h-96 w-[30vw] origin-center -translate-x-1/2 overflow-hidden rounded-3xl border border-black"
+              className="mask-clip-path2 absolute left-1/2 top-0 z-20 h-96 w-[78vw] origin-center -translate-x-1/2 overflow-hidden rounded-3xl border border-black md:w-[30vw]"
             >
               <img src={`${import.meta.env.BASE_URL}img/hackathon.jpg`} className="absolute inset-0 size-full object-cover" alt="Hackathon experience" />
             </div>

@@ -60,14 +60,14 @@ const RotatingMark = () => (
 
 const ContactUs = () => {
   return (
-    <div id="contact" className="my-20 min-h-96 w-screen px-10">
-      <div className="relative rounded-lg bg-black py-24 text-blue-50 sm:overflow-hidden">
+    <div id="contact" className="my-12 min-h-96 w-screen px-4 sm:my-20 sm:px-10">
+      <div className="relative overflow-hidden rounded-lg bg-black px-4 py-20 text-blue-50 sm:px-0 sm:py-24">
         <div className="absolute -left-20 top-0 hidden h-full w-72 overflow-visible sm:block lg:left-20 lg:w-96">
           <RotatingMark />
           <LottieClipBox clipClass="contact-lottie-full lg:translate-y-10 translate-y-60" />
         </div>
 
-        <div className="absolute -top-40 left-20 w-60 sm:top-1/2 md:left-auto md:right-10 lg:top-20 lg:w-80">
+        <div className="absolute -right-20 -top-12 w-48 opacity-35 sm:top-1/2 sm:opacity-100 md:left-auto md:right-10 lg:top-20 lg:w-80">
           <ImageClipBox src={`${import.meta.env.BASE_URL}img/avtgit.jpg`} clipClass="sword-man-clip-path md:scale-125" />
         </div>
 
@@ -76,7 +76,7 @@ const ContactUs = () => {
 
           <AnimatedTitle
             title="let&#39;s b<b>u</b>ild <br/> digital products <br/> t<b>o</b>gether."
-            className="special-font !md:text-[6.2rem] w-full font-zentry !text-8xl !font-black !leading-[.9]"
+            className="contact-title special-font w-full font-zentry !font-black !leading-[.9]"
           />
 
           <a href="mailto:Dangdinhtien234204@gamil.com">

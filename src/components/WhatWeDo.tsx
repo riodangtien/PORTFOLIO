@@ -20,10 +20,10 @@ const WhatWeDo = () => {
     <section className="whatwedo py-8 lg:py-32  h-full min-h-dvh w-screen bg-yellow-300 overflow-hidden flex-col gap-10  flex justify-center items-center">
       <p className="font-general  text-sm uppercase md:text-[10px]">WHO I AM</p>
       <AnimatedTitle
-        className=" !gap-1 !text-black"
+        className="whatwedo-title !gap-1 !text-black"
         title="I'M BUILDING<br/> DIGITAL EXPERIENCES <br/> THAT COMBINE <br/> CODE, DESIGN <br/>AND PRODUCT<br/>THINKING"
       />
-      <p className="  text-center text-xs lg:text-sm font-circular-web">
+      <p className="max-w-xl px-5 text-center text-xs font-circular-web lg:text-sm">
         A personal portfolio shaped by web development, UI/UX design, and product-focused practice.
       </p>{" "}
       <a href="https://github.com/riodangtien" target="_blank" rel="noreferrer">

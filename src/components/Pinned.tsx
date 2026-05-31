@@ -7,9 +7,17 @@ import PaginationScroll from "./PaginationScroll";
 const Pinned = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
+      const isMobile = window.matchMedia("(max-width: 767px)").matches;
       const items = gsap.utils.toArray(".pagination");
       const paragraphs = gsap.utils.toArray(".pagination p");
       const lineContainers = gsap.utils.toArray(".lineContainer");
+
+      if (isMobile) {
+        gsap.set(paragraphs, { opacity: 1, scaleY: 1, visibility: "visible" });
+        gsap.set(lineContainers, { opacity: 1, visibility: "visible", height: "4rem" });
+        return;
+      }
+
       gsap.set(paragraphs, { opacity: 0.3, scaleY: 0, visibility: "hidden" });
       gsap.set(lineContainers, { opacity: 0, visibility: "hidden", height: 0 });
 
@@ -81,7 +89,7 @@ const Pinned = () => {
     return () => ctx.revert();
   }, []);
   return (
-    <section id="achievements" className="bg relative h-[113vh] w-full min-w-[100vw] overflow-hidden bg-[#edff66]">
+    <section id="achievements" className="bg relative min-h-screen w-full overflow-hidden bg-[#edff66] md:h-[113vh] md:min-w-[100vw]">
       <div className="max-w-[1400px] pinned relative h-full w-full mx-auto">
         <div className="flex gap-5 px-5 py-4 md:px-10 flex-col items-start">
           <AnimatedTitle
