@@ -44,7 +44,7 @@ const Story = () => {
           <div className=" w-full imgtilt story-img-container  h-[90vh] md:h-dvh relative">
             <div className=" story-img-mask">
               <div className="story-img-content">
-                <img src="/img/avt.jpg" alt="Dang Dinh Tien avatar" className="object-contain" />
+                <img src={`${import.meta.env.BASE_URL}img/avt.jpg`} alt="Dang Dinh Tien avatar" className="object-contain" />
               </div>
             </div>
             <RoundedCorners />

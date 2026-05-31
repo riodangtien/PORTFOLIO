@@ -61,7 +61,7 @@ const AboutUs = () => {
             <div
               className="mask-clip-path2 absolute left-1/2 top-0 z-20 h-96 w-[30vw] origin-center -translate-x-1/2 overflow-hidden rounded-3xl border border-black"
             >
-              <img src="/img/hackathon.jpg" className="absolute inset-0 size-full object-cover" alt="Hackathon experience" />
+              <img src={`${import.meta.env.BASE_URL}img/hackathon.jpg`} className="absolute inset-0 size-full object-cover" alt="Hackathon experience" />
             </div>
             <div className="about-subtext">
               <p className="capitalize">A journey of learning, building, and improving over three years</p>

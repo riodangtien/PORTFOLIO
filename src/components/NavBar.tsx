@@ -79,7 +79,7 @@ const NavBar = () => {
               ))}
             </div>
             <button onClick={toggleAudio} className=" ml-10 p-1 flex items-center space-x-0.5">
-              <audio ref={audioElementRef} src="/audio/loop.mp3" loop className=" hidden" />
+              <audio ref={audioElementRef} src={`${import.meta.env.BASE_URL}audio/loop.mp3`} loop className=" hidden" />
               {[1, 2, 3, 4].map((index) => (
                 <div
                   style={{ animationDelay: `${index * 0.1}s` }}

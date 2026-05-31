@@ -24,6 +24,8 @@ const techIcons = [
   { label: "Vite", Icon: SiVite },
 ];
 
+const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
 const TechMarquee = () => {
   const items = [...techIcons, ...techIcons, ...techIcons];
 
@@ -115,14 +117,14 @@ const Hero = () => {
       <div id="video-frame" className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75">
         {" "}
         <div ref={frameRef} className="hero-avatar-frame video-container">
-          <img src="/img/avtgit.jpg" alt="" aria-hidden="true" className="hero-avatar-layer opacity-0" />
+          <img src={publicAsset("img/avtgit.jpg")} alt="" aria-hidden="true" className="hero-avatar-layer opacity-0" />
           <img
-            src="/img/avt.jpg"
+            src={publicAsset("img/avt.jpg")}
             alt="Avatar"
             className="hero-avatar-layer"
           />
           <div ref={revealLayerRef} className="hero-reveal-layer" aria-hidden="true">
-            <img ref={revealImageRef} src="/img/avtgit.jpg" alt="" className="hero-avatar-layer" />
+            <img ref={revealImageRef} src={publicAsset("img/avtgit.jpg")} alt="" className="hero-avatar-layer" />
           </div>
           <div ref={revealBoxRef} className="hero-reveal-box" aria-hidden="true" />
         </div>
